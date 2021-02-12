@@ -1,0 +1,31 @@
+{
+  "name": "sergunik/GoogleShoppingCategoryParcer",
+  "description": "Download Google Shopping Category, parse it and return as an array or json",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Serhii Topolnytskyi",
+      "email": "serhii.topolnytskyi@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.2"
+  },
+  "require-dev": {
+    "fakerphp/faker": "^1.9.1",
+    "mockery/mockery": "^1.4.2",
+    "phpunit/phpunit": "^9.3.3",
+    "nunomaduro/larastan": "^0.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "GSCP\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    }
+  },
+  "minimum-stability": "dev"
+}
