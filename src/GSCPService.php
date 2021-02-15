@@ -1,46 +1,38 @@
 <?php
-namespace App\Services;
+namespace GSCP;
 
 use Exception;
 
 class GSCPService
 {
-    private const URL = 'https://www.google.com/basepages/producttype/taxonomy-with-ids.%locale%.txt';
+    use GSCPSettersTrait;
+    use GSCPDownloadTrait;
+
     private const DEPTH = 6;
 
     /** @var string */
-    private $locale = 'en-US';
+    private $filename;
+
+    /** @var string */
+    private $locale;
 
     /** @var array */
     private $categories;
 
     /** @var string[] */
-    private $columns = [
-        'id',
-        'name',
-        'parentId',
-        'parents',
-        'children',
-    ];
+    private $columns;
 
-    /**
-     * @param string $locale
-     * @return self
-     */
-    public function setLocale(string $locale): self
+    public function __construct(array $options = [])
     {
-        $this->locale = str_replace('_', '-', $locale);
-        return $this;
-    }
-
-    /**
-     * @param array $columns
-     * @return self
-     */
-    public function setColumns(array $columns): self
-    {
-        $this->columns = $columns;
-        return $this;
+        $this->filename = $options['filename'] ?? 'gscp.txt';
+        $this->locale = $options['locale'] ?? 'en-US';
+        $this->columns = $options['columns'] ?? [
+            'id',
+            'name',
+            'parentId',
+            'parents',
+            'children',
+        ];
     }
 
     /**
@@ -51,10 +43,10 @@ class GSCPService
         $this->getCategories();
 
         $this->parse();
-        if (in_array('children', $this->columns)) {
+        if (in_array('children', $this->columns, true)) {
             $this->addChildren();
         }
-        if (in_array('parents', $this->columns)) {
+        if (in_array('parents', $this->columns, true)) {
             $this->addParents();
         }
         $this->format();
@@ -148,8 +140,8 @@ class GSCPService
 
     private function getCategories(): void
     {
-        $url = str_replace('%locale%', $this->getLocale(), self::URL);
-        $content = (string) file_get_contents($url);
+        $this->download();
+        $content = (string) file_get_contents($this->filename);
         $list = explode(PHP_EOL, $content);
 
         $this->categories = [];
