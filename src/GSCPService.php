@@ -65,15 +65,15 @@ class GSCPService
     private function parse(): void
     {
         $parsedCategories = [];
-        for ($depth=0; $depth<self::DEPTH; $depth++) {
+        for ($depth = 0; $depth < self::DEPTH; $depth++) {
             foreach ($this->categories as $id => $category) {
-                if(count($category) !== $depth + 1) {
+                if (count($category) !== $depth + 1) {
                     continue;
                 }
 
                 $parentId = 0;
-                $parentCategoryDepth = $depth-1;
-                if($parentCategoryDepth >= 0) {
+                $parentCategoryDepth = $depth - 1;
+                if ($parentCategoryDepth >= 0) {
                     foreach ($parsedCategories as $item) {
                         if ($item['name'] === $category[$parentCategoryDepth]) {
                             $parentId = $item['id'];
@@ -121,7 +121,7 @@ class GSCPService
                 $parentId = $this->categories[$parentId]['parentId'];
             }
 
-            $item['parents'] =  $parents;
+            $item['parents'] = $parents;
         }
     }
 

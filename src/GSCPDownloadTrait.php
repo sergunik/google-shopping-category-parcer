@@ -7,7 +7,7 @@ trait GSCPDownloadTrait
 
     private function download(): void
     {
-        if(!file_exists($this->filename)) {
+        if (!file_exists($this->filename)) {
             $url = str_replace('%locale%', $this->getLocale(), $this->url);
             copy($url, $this->filename);
         }
