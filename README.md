@@ -1,5 +1,7 @@
-[![Build Status](https://travis-ci.com/sergunik/google-shopping-category-parcer.svg?branch=master)](https://travis-ci.com/sergunik/google-shopping-category-parcer)
-[![Coverage Status](https://coveralls.io/repos/github/sergunik/google-shopping-category-parcer/badge.svg?branch=master)](https://coveralls.io/github/sergunik/google-shopping-category-parcer?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sergunik/google-shopping-category-parcer/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sergunik/google-shopping-category-parcer/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/sergunik/google-shopping-category-parcer/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/sergunik/google-shopping-category-parcer/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/sergunik/google-shopping-category-parcer/badges/build.png?b=master)](https://scrutinizer-ci.com/g/sergunik/google-shopping-category-parcer/build-status/master)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/sergunik/google-shopping-category-parcer/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 
 
 # Google Shopping Category Parcer
