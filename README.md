@@ -1,7 +1,7 @@
-![Packagist Downloads](https://img.shields.io/packagist/dt/sergunik/google-shopping-category-parcer)
-![Scrutinizer build](https://img.shields.io/scrutinizer/build/g/sergunik/google-shopping-category-parcer/master)
-![Scrutinizer code quality](https://img.shields.io/scrutinizer/quality/g/sergunik/google-shopping-category-parcer/master)
-![Scrutinizer coverage (GitHub/BitBucket)](https://img.shields.io/scrutinizer/coverage/g/sergunik/google-shopping-category-parcer/master)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/sergunik/google-shopping-category-parcer)](https://packagist.org/packages/sergunik/google-shopping-category-parcer)
+[![Scrutinizer build](https://img.shields.io/scrutinizer/build/g/sergunik/google-shopping-category-parcer/master)](https://scrutinizer-ci.com/g/sergunik/google-shopping-category-parcer/build-status/master)
+[![Scrutinizer code quality](https://img.shields.io/scrutinizer/quality/g/sergunik/google-shopping-category-parcer/master)](https://scrutinizer-ci.com/g/sergunik/google-shopping-category-parcer/)
+[![Scrutinizer coverage (GitHub/BitBucket)](https://img.shields.io/scrutinizer/coverage/g/sergunik/google-shopping-category-parcer/master)](https://scrutinizer-ci.com/g/sergunik/google-shopping-category-parcer/code-structure/master/code-coverage)
 
 
 # Google Shopping Category Parcer
